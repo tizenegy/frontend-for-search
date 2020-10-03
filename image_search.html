@@ -3,14 +3,33 @@
 <html lang="en">
     <head>
         <title>Image Search</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="search_frontend.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
-        <a href="index.html">Google Search</a>
-        <form action="https://google.com/search">
-            <input type="text" name="q">
-            <input type="submit" value="Google Search">
-        </form>
+        <ul>
+            <li><a class="links" href="#user"><button class="signbutton" type="button">Sign in</button></a></li>
+            <li><a href="#grid"><img class="grid"
+                        src="grid.PNG"
+                        title="Google apps"></a></li>
+            <li><a href="search_frontend.html">Google Search</a></li>
+        </ul>
+    
+        <div class="logo">
+            <img alt="Google" src="googlelogo_images.PNG">
+        </div>
+    
+        <div >
+            <form action="https://google.com/search">
+                <div class="bar"><input class="searchbar" type="text" name="q">
+                    <img class="magnifier" src="lupe.PNG" title=""></a>
+                </div>
+                <div class="buttons"><input class="button" type="submit" value="Google Search">
+                <input class="button" type="button" value="I'm Feeling Lucky"></div>
+            </form>
+        </div>
+    
     </body>
 </html>
