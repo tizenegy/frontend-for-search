@@ -10,7 +10,7 @@
     </head>
     <body>
         <ul>
-            <li><a class="links" href="#user"><button class="signbutton" type="button">Sign in</button></a></li>
+            <li><a class="links" href="#user"><button class="sign_in" type="button">Sign in</button></a></li>
             <li><a href="#grid"><img class="grid"
                         src="grid.PNG"
                         title="Google apps"></a></li>
@@ -23,11 +23,13 @@
     
         <div >
             <form action="https://google.com/search">
-                <div class="bar"><input class="searchbar" type="text" name="q">
-                    <img class="magnifier" src="lupe.PNG" title=""></a>
+                <input type="hidden" id="imagesearch" name="tbm" value="isch">
+                <div class="bar">
+                    <input class="searchbar" type="text" name="q">
+                    <img class="magnifier_left" src="lupe.PNG" title="">
+                    <input class="magnifier_right" type="image" src="lupe_blau.PNG" alt="submit">
+                    
                 </div>
-                <div class="buttons"><input class="button" type="submit" value="Google Search">
-                <input class="button" type="button" value="I'm Feeling Lucky"></div>
             </form>
         </div>
     
