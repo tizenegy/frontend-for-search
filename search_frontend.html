@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="search_frontend.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </header>
 
 <body>
@@ -23,15 +24,22 @@
     </div>
 
     <div >
-        <form action="https://google.com/search">
+        <form action="https://google.com/search" method="GET" id="searchform">
             <div class="bar"><input class="searchbar" type="text" name="q">
                 <img class="magnifier" src="lupe.PNG" title=""></a>
             </div>
+            <input type="hidden" id="lucky" name="btnI" disabled="disabled">
             <div class="buttons">
                 <input class="button" type="submit" value="Google Search">
-                <input type="hidden" type="text" name="btnI" value="I%27m+Feeling+Lucky">
-                <input class="button" type="submit" value="I'm Feeling Lucky"></div>
+                <input class="button" id="feelinglucky" type="button" value="I'm Feeling Lucky">
+            </div>
         </form>
     </div>
-
+    <script>
+        $('#feelinglucky').click(function(){
+            $('#lucky').attr("disabled",false);
+            $('#lucky').val("I'm Feeling Lucky");
+            $('#searchform').submit();
+            });
+        </script>
 </body>
