@@ -1,3 +1,4 @@
+$red: #d93025;
 $blue1: #4885ed;
 $blue2: #2F5BB7;
 $white: white;
@@ -6,6 +7,7 @@ $grey2: #c8c8c8;
 $grey3: #707070;
 $grey4: #5f6368;
 $black: black;
+$font: "Roboto";
 
 
 ul {
@@ -21,7 +23,7 @@ li a {
   text-align: center;
   padding: 10px 10px;
   font-size:13px;
-  font-family: "Roboto";
+  font-family: $font;
 }
 li a:hover {
   text-decoration: underline;
@@ -40,7 +42,7 @@ li a:hover {
   position:relative;
   bottom:7px;
   font-weight:bold;
-  font-family: "Roboto";
+  font-family: $font;
 }
 .logo{
   margin-top:200px;
@@ -136,16 +138,16 @@ li a:hover {
   padding: 7px 10px;
 }
 .advanced_header {
-    color: #d93025;
+    color: $red;
     font-size: 22px;
     margin: 15px 0px;
-    font-family: "Roboto";
+    font-family: $font;
 }
 .advanced_header2 {
     color: $black;
     font-size: 17px;
     margin: 15px 0px;
-    font-family: "Roboto";
+    font-family: $font;
     font-weight: normal
 }
 .advanced_search_label {
@@ -192,7 +194,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   border: 0px solid $white;
-  font-family: "Roboto";
+  font-family: $font;
   font-size:13px;
   -webkit-text-fill-color: $black;
   -webkit-box-shadow: 0 0 0px 1000px $white inset;
