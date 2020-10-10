@@ -1,4 +1,5 @@
-$blue: #4885ed;
+$blue1: #4885ed;
+$blue2: #2F5BB7;
 $white: white;
 $grey1: #f3f3f3;
 $grey2: #c8c8c8;
@@ -31,7 +32,7 @@ li a:hover {
   bottom:1px;
 }
 .sign_in{
-  background-color: $blue;
+  background-color: $blue1;
   color: $white;
   border:none;
   border-radius:3px;
@@ -103,19 +104,81 @@ li a:hover {
   outline:none;
 }
 .button:hover{
-  border: 1px solid $grey2;
-  padding: 9px 19px;
-  color: $black;
+    border: 1px solid $grey2;
+    padding: 9px 19px;
+    color: $black;
+    box-shadow: 0px 1px 6px 0px $grey2;
+  }
+  .button:focus{
+    border:1px solid $blue1;
+    padding: 9px 19px;
+  }
+.blue_button{
+  background-color: $blue1;
+  border: none;
+  color:$white;
+  font-weight: bold;
+  font-size:12px;
+  padding: 7px 10px;
+  margin: 8px 0px;
+  border-radius:4px;
+  outline:none;
+  float: right;
+}
+.blue_button:hover{
+  border: none solid $blue2;
+  padding: 7px 10px;
+  color: $white;
   box-shadow: 0px 1px 6px 0px $grey2;
 }
-.button:focus{
-  border:1px solid $blue;
-  padding: 9px 19px;
+.blue_button:focus{
+  border: none solid $blue2;
+  padding: 7px 10px;
 }
 .advanced_header {
     color: #d93025;
-    font-size: 20px;
-    margin: 25px 35px
+    font-size: 22px;
+    margin: 15px 0px;
+    font-family: "Roboto";
+}
+.advanced_header2 {
+    color: $black;
+    font-size: 17px;
+    margin: 15px 0px;
+    font-family: "Roboto";
+    font-weight: normal
+}
+.advanced_search_label {
+    color: $black;
+    font-size: 13px;
+    margin: 8px 0px;
+    float: left;
+    white-space: nowrap;
+}
+.advanced_search_box {
+    color: $grey4;
+    border: 1px solid $grey2;
+    font-size: 13px;
+    margin: 8px 0px;  
+    width: 100%; 
+    float: right
+}
+.advanced_search_box:focus {
+    outline: $grey2;
+    box-shadow: 0px 0px 0px 0px $blue1;
+    border: 1px solid $blue1;
+    font-size: 13px;
+}
+.wrapper {
+    margin-left:auto;
+    margin-right:auto;
+}
+.hr_thin {
+height: 1px;
+border: 0;
+color: $grey1;
+background-color: $grey1;
+width: 100%;
 }
 
 /* Change autocomplete styles in WebKit */
@@ -130,7 +193,7 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   border: 0px solid $white;
   font-family: "Roboto";
-  font-size:16px;
+  font-size:13px;
   -webkit-text-fill-color: $black;
   -webkit-box-shadow: 0 0 0px 1000px $white inset;
   transition: background-color 5000s ease-in-out 0s;
