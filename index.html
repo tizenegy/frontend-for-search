@@ -1,29 +1,45 @@
-<!-- MAIN SEARCH -->
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Google</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <a href="advanced_search.html">Advanced Search</a>
-        <a href="image_search.html">Image Search</a>
+<html>
+<header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="search_frontend.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</header>
 
-        <div class="logo">
-            <img alt="Google" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
-        </div>
+<body>
+    <ul>
+        <title>Google Search</title>
+        <li><a class="links" href="#user"><button class="sign_in" type="button">Sign in</button></a></li>
+        <li><a href="#grid"><img class="grid"
+                    src="grid.PNG"
+                    title="Google apps"></a></li>
+        <li><a href="image_search.html">Images</a></li>
+        <li><a href="advanced_search.html">Advanced</a></li>
+    </ul>
 
-        <div class="bar">
-            <input class="searchbar" type="text" title="Search">
-            <a href="#"> <img class="voice"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png"
-                    title="Search by Voice"></a>
-        </div>
-     
-        <form action="https://google.com/search">
-            <input type="text" name="q">
-            <input type="submit" value="Google Search">
+    <div class="logo">
+        <img alt="Google" src="googlelogo_color_272x92dp.png">
+    </div>
+
+    <div >
+        <form action="https://google.com/search" method="GET" id="searchform">
+            <div class="bar"><input class="searchbar" type="text" name="q">
+                <img class="magnifier" src="lupe.PNG" title="">
+            </div>
+            <input type="hidden" id="lucky" name="btnI" disabled="disabled">
+            <div class="buttons">
+                <input class="button" type="submit" value="Google Search">
+                <input class="button" id="feelinglucky" type="button" value="I'm Feeling Lucky">
+            </div>
         </form>
-    </body>
-</html>
+    </div>
+    <script>
+        $('#feelinglucky').click(function(){
+            $('#lucky').attr("disabled",false);
+            $('#lucky').val("I'm Feeling Lucky");
+            $('#searchform').submit();
+            });
+    </script>
+</body>
